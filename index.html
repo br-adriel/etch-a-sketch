@@ -30,16 +30,33 @@
       <h1>Etch a Sketch</h1>
     </header>
     <main>
-      <section class="pinceis">
-        <button class="pincel selecionado" data-color="#000">
-          <i class="fas fa-paint-brush"></i>
-        </button>
-        <button class="pincel" id="borracha" data-color="#fff">
-          <i class="fas fa-eraser"></i>
-        </button>
-        <button class="novoPincel" id="novoPincel">
-          <i class="fas fa-plus"></i>
-        </button>
+      <section class="controles">
+        <div class="pinceis">
+          <button class="pincel selecionado" data-color="#000">
+            <i class="fas fa-paint-brush"></i>
+          </button>
+          <button class="pincel" id="borracha" data-color="#fff">
+            <i class="fas fa-eraser"></i>
+          </button>
+        </div>
+        <div class="form">
+          <div class="control">
+            <label>Novo pincél:</label>
+            <input type="color" id="inputColor" />
+          </div>
+          <div class="submit">
+            <button><i class="fas fa-check"></i></button>
+          </div>
+        </div>
+        <div class="form">
+          <div class="control">
+            <label>Grade:</label>
+            <input type="number" min="1" max="100" id="inputGrid" />
+          </div>
+          <div class="submit">
+            <button id="submitGrid"><i class="fas fa-check"></i></button>
+          </div>
+        </div>
       </section>
       <section class="display" id="display"></section>
     </main>
