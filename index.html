@@ -14,6 +14,14 @@
       rel="stylesheet"
     />
 
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -23,14 +31,21 @@
     </header>
     <main>
       <section class="pinceis">
-        <button class="pincel selecionado"></button>
-        <button class="pincel"></button>
-        <button class="pincel"></button>
+        <button class="pincel selecionado" data-color="#000">
+          <i class="fas fa-paint-brush"></i>
+        </button>
+        <button class="pincel" id="borracha" data-color="#fff">
+          <i class="fas fa-eraser"></i>
+        </button>
+        <button class="pincel" id="novoPincel">
+          <i class="fas fa-plus"></i>
+        </button>
       </section>
       <section class="display" id="display"></section>
     </main>
     <footer>
       <p>Adriel Faria</p>
     </footer>
+    <script src="script.js" defer></script>
   </body>
 </html>
