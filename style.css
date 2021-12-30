@@ -46,11 +46,16 @@ main {
   flex-wrap: wrap;
 }
 
-.pinceis .pincel {
-  width: 2rem;
-  height: 2rem;
+.pincel {
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
   border-radius: 50%;
   border: 3px dashed #fff;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .pincel.selecionado {
@@ -63,4 +68,9 @@ main {
   background: #eee;
   border-radius: 0.5rem;
   padding: 1rem;
+  display: grid;
+}
+
+.pixel {
+  background: #fff;
 }
