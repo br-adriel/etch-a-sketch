@@ -132,9 +132,14 @@ main {
 @media (max-width: 900px) {
   main {
     flex-direction: column;
+    align-items: center;
   }
 
   .controles {
     width: 100%;
+  }
+
+  .display {
+    max-width: 100%;
   }
 }
