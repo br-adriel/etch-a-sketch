@@ -1,8 +1,15 @@
 const display = document.getElementById("display");
+const gridInput = document.getElementById("inputGrid");
+const gridBtn = document.getElementById("submitGrid");
 let currentBrush = document.getElementsByClassName("selecionado")[0];
 let gridSize = 16;
 let currentColor = currentBrush.dataset.color;
 let brushes = Array.from(document.getElementsByClassName("pincel"));
+
+gridBtn.addEventListener("click", () => {
+  gridSize = gridInput.value;
+  novoDisplay(gridSize);
+});
 
 function addClickListener(brush) {
   brush.addEventListener("click", () => {
