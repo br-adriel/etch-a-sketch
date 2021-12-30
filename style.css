@@ -115,3 +115,12 @@ main {
 .pixel {
   background: #fff;
 }
+
+.arco-iris {
+  background: linear-gradient(
+    45deg,
+    rgba(41, 128, 185, 1) 0%,
+    rgba(39, 174, 96, 1) 50%,
+    rgba(230, 126, 34, 1) 100%
+  );
+}

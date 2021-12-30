@@ -4,6 +4,16 @@ const gridBtn = document.getElementById("submitGrid");
 const colorInput = document.getElementById("inputColor");
 const colorBtn = document.getElementById("submitColor");
 const pinceis = document.getElementsByClassName("pinceis")[0];
+const rainbow = [
+  "#8e44ad",
+  "#2980b9",
+  "#16a085",
+  "#27ae60",
+  "#f1c40f",
+  "#e67e22",
+  "#e74c3c",
+];
+let rainbowIndex = -1;
 let currentBrush = document.getElementsByClassName("selecionado")[0];
 let gridSize = 16;
 let currentColor = currentBrush.dataset.color;
@@ -41,6 +51,15 @@ function addClickListener(brush) {
   });
 }
 
+function getCurrentRainbow() {
+  if (rainbowIndex === 6) {
+    rainbowIndex = 0;
+  } else {
+    rainbowIndex++;
+  }
+  return rainbow[rainbowIndex];
+}
+
 function novoDisplay(gridSize) {
   display.style.cssText = `grid-template-columns: repeat(${gridSize}, 1fr);`;
   apagarDisplay();
@@ -49,6 +68,9 @@ function novoDisplay(gridSize) {
       let pixel = document.createElement("div");
       pixel.classList.add("pixel");
       pixel.addEventListener("mouseenter", () => {
+        if (currentBrush.classList.contains("arco-iris")) {
+          currentColor = getCurrentRainbow();
+        }
         pixel.style.background = currentColor;
       });
       display.appendChild(pixel);
