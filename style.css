@@ -54,36 +54,40 @@ main {
 }
 
 .form {
-  /*display: none;*/
-  transition: 0.3s display;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   gap: 1rem;
 }
 
 .form .control {
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   gap: 1rem;
-  flex-grow: 1;
 }
 
 .form input {
+  width: 50%;
+  flex-grow: 1;
   border-radius: 0.5rem;
-  width: 30%;
   font-size: 1.3rem;
-  padding: 0.25rem;
+  padding: 0.5rem;
+  min-height: 3rem;
 }
 
-.form .submit button {
-  font-size: 1.2rem;
-  background: transparent;
+.form button {
+  font-size: 1.3rem;
+  background: #282120;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: #fff;
 }
 
-.form .submit:hover button {
-  color: #444;
+.form button:hover {
+  color: #eee;
 }
 
 .pincel,
