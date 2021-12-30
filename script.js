@@ -91,4 +91,8 @@ function iniciar() {
   novoDisplay(gridSize);
 }
 
+document.querySelector(
+  "footer p"
+).textContent = `Adriel Faria, ${new Date().getFullYear()}`;
+
 iniciar();
