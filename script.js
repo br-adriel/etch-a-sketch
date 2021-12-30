@@ -1,6 +1,9 @@
 const display = document.getElementById("display");
 const gridInput = document.getElementById("inputGrid");
 const gridBtn = document.getElementById("submitGrid");
+const colorInput = document.getElementById("inputColor");
+const colorBtn = document.getElementById("submitColor");
+const pinceis = document.getElementsByClassName("pinceis")[0];
 let currentBrush = document.getElementsByClassName("selecionado")[0];
 let gridSize = 16;
 let currentColor = currentBrush.dataset.color;
@@ -9,6 +12,21 @@ let brushes = Array.from(document.getElementsByClassName("pincel"));
 gridBtn.addEventListener("click", () => {
   gridSize = gridInput.value;
   novoDisplay(gridSize);
+});
+
+colorBtn.addEventListener("click", () => {
+  let icone = document.createElement("i");
+  icone.classList.add("fas");
+  icone.classList.add("fa-paint-brush");
+
+  let novoPincel = document.createElement("button");
+  novoPincel.classList.add("pincel");
+  novoPincel.setAttribute("data-color", colorInput.value);
+  novoPincel.style.color = colorInput.value;
+  addClickListener(novoPincel);
+  novoPincel.appendChild(icone);
+  pinceis.appendChild(novoPincel);
+  brushes = Array.from(document.getElementsByClassName("pincel"));
 });
 
 function addClickListener(brush) {
