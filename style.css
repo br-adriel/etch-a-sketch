@@ -34,8 +34,15 @@ main {
   padding: 2rem;
 }
 
-.pinceis {
+.controles {
   width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pinceis,
+.form div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -44,6 +51,39 @@ main {
   padding: 1rem;
   border-radius: 0.5rem;
   flex-wrap: wrap;
+}
+
+.form {
+  /*display: none;*/
+  transition: 0.3s display;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form .control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.form input {
+  border-radius: 0.5rem;
+  width: 30%;
+  font-size: 1.3rem;
+  padding: 0.25rem;
+}
+
+.form .submit button {
+  font-size: 1.2rem;
+  background: transparent;
+}
+
+.form .submit:hover button {
+  color: #444;
 }
 
 .pincel,
