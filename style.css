@@ -128,3 +128,13 @@ main {
     rgba(230, 126, 34, 1) 100%
   );
 }
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+
+  .controles {
+    width: 100%;
+  }
+}
