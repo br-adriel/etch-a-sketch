@@ -1,4 +1,4 @@
-# Etch a Sketch
+# Etch a Sketch 🎨
 
 Mini lousa digital desenvolvida em javascript com o propósito de praticar minhas habilidades em manipulaçao do DOM.
 
